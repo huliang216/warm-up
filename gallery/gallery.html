@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>gallery</title>
+     <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+        /** 通用部分 **/
+        * { padding: 0; margin: 0; }
+
+        body {background-color: #EAEAEA;}
+
+        .clearfix:after {
+            content: '.';
+            display: block;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+
+        }
+
+        .nav-color1{border-top: 5px solid #3F1D4A;}
+        .nav-color2{border-top: 5px solid #D7B8E0;}
+        .nav-color3{border-top: 5px solid #C68FFF;}
+        .nav-color4{border-top: 5px solid #FD977A;}
+        .nav-color5{border-top: 5px solid #3F1D4A;}
+
+        /** 头部部分 */
+        header {
+            background: #401B4B;
+            width: 100%;
+            height: 100px;
+            position: relative;
+
+            color: white;
+        }
+
+        header .logo {
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            bottom: 5px;
+            left: 200px;
+        }
+
+        header nav {
+            position: absolute;
+            right: 150px;
+            bottom: 5px;
+        }
+        
+        header nav ul {
+            list-style: none;
+
+        }
+
+        header nav ul li {
+            display: inline-block;
+            height: 20px;
+            min-width: 50px;
+            cursor: default;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .gl-container { 
+            margin: 0 40px;
+        }
+
+        .gl-nav {
+            margin: 20px 40px 0;
+        }
+
+        
+        /*这种设置li之间会有一点空白，但是盒模型看没有间距，不知道怎么回事？*/
+        /*.gl-nav nav ul li {
+            display: inline-block;
+            box-sizing: border-box;
+            list-style: none;
+            height: 60px;
+            min-width: 50px;
+            text-align: center;
+            border-top: 5px solid red;
+            border-left: 1px solid red;
+            padding: 15px 20px 20px;
+        }*/
+
+        .gl-nav ul {
+            position: relative;
+
+        }
+        
+        .gl-nav ul li {
+            float: left;
+            padding: 15px 20px 20px;
+            list-style: none;
+            margin-right: 2px;
+            background: white;
+        }
+
+        .gl-nav ul li:hover {
+            background-color: #FD977A;
+            cursor: pointer;
+        }
+
+        .gl-nav ul li:hover a {
+            color: white;
+        }
+
+        .gl-nav ul li a {
+            text-decoration: none;
+            /*color: #401B4B;*/
+        }
+
+        .gl-container {
+            position: relative;
+        }
+
+        .gl-container .m-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 300px;
+            width: 800px;
+        }
+
+        .gl-container .m-right {
+            position: absolute;
+            top: 0;
+            left: 820px;
+            right: 0;
+            background-color: white;
+        } 
+
+        .m-right .m-search {
+            padding: 20px;
+            
+        }
+
+        .m-search .search-text {
+            width: 75%;
+            height: 40px;
+            border: 0;
+            background: url(./img/search.png) no-repeat center left;
+            outline: 1px solid #ccc;
+        }
+
+        .m-search .search-text:focus , .m-input .search-btn:focus{
+            outline: 1px solid black;
+
+        }
+
+        .m-search .search-btn {
+            width: 23%;
+            height: 40px;
+            border: 0;
+        }
+
+        .m-right .m-list ul li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .m-list li span {
+            display: inline-block;
+            width: 16px;
+            height:16px;
+            line-height: 16px;
+            text-align: center;
+            background: #3F1D4A;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .m-list li div {
+            display: inline-block;
+        }
+    </style>
+    
+</head>
+<body>
+    <header class="gl-header">
+        <img class="logo" src="" alt="" width=30 height=40>
+        <nav class="nav">
+            <ul >
+                <li><a href="#">首页</a></li>
+                <li><a href="#">文章</a></li>
+                <li><a href="#">作品</a></li>
+                <li><a href="#">关于</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="gl-nav">
+        <ul class="clearfix">
+            <li class="nav-color1"><a href="#">ALL</a></li>
+            <li class="nav-color2"><a href="#">Javascript Util Function</a></li>
+            <li class="nav-color3"><a href="#">UI Components</a></li>
+            <li class="nav-color4"><a href="#">Framewrok</a></li>
+            <li class="nav-color5"><a href="#">Application</a></li>
+        </ul>
+    </nav>
+
+    <div class="gl-container clearfix">
+        <div class="m-left">
+            <div class="item"></div>
+            
+        </div>
+        <div class="m-right">
+            <div class="m-search">
+                <div class="m-input">
+                    <input type="text" class="search-text">
+                    <input type="button" class="search-btn" value="GO">
+                </div>
+            </div>
+            <div class="m-hot-list">
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
