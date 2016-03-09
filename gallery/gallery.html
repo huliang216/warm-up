@@ -7,7 +7,7 @@
      <!-- <link rel="stylesheet" href="css/style.css"> -->
     <style>
         /** 通用部分 **/
-        * { padding: 0; margin: 0; }
+        * { padding: 0; margin: 0; font-size: 14px;}
 
         body {background-color: #EAEAEA;}
 
@@ -30,7 +30,7 @@
         header {
             background: #401B4B;
             width: 100%;
-            height: 100px;
+            height: 80px;
             position: relative;
 
             color: white;
@@ -40,14 +40,14 @@
             width: 100px;
             height: 30px;
             position: absolute;
-            bottom: 5px;
-            left: 200px;
+            bottom: 16px;
+            left: 110px;
         }
 
         header nav {
             position: absolute;
-            right: 150px;
-            bottom: 5px;
+            right: 115px;
+            bottom: 12px;
         }
         
         header nav ul {
@@ -68,11 +68,12 @@
         }
 
         .gl-container { 
-            margin: 0 40px;
+            margin: 0 110px;
+            background: white;
         }
 
         .gl-nav {
-            margin: 20px 40px 0;
+            margin: 20px 110px 0;
         }
 
         
@@ -95,20 +96,23 @@
         }
         
         .gl-nav ul li {
+            box-sizing: border-box;
             float: left;
+            height: 50px;
             padding: 15px 20px 20px;
+            border-right: 1px solid #EAEAEA;
+            border-bottom: 1px solid #EAEAEA;
             list-style: none;
-            margin-right: 2px;
             background: white;
         }
 
         .gl-nav ul li:hover {
-            background-color: #FD977A;
+            border-bottom: 1px solid white;
             cursor: pointer;
         }
 
         .gl-nav ul li:hover a {
-            color: white;
+            color: red;
         }
 
         .gl-nav ul li a {
@@ -124,61 +128,156 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 300px;
-            width: 800px;
+            width: 710px;
+            background: white;
         }
 
         .gl-container .m-right {
             position: absolute;
             top: 0;
-            left: 820px;
-            right: 0;
-            background-color: white;
+            left: 730px;
+            width: 260px;
         } 
 
-        .m-right .m-search {
+        .m-right .search-container {
             padding: 20px;
-            
+            background-color: white;
         }
 
-        .m-search .search-text {
-            width: 75%;
+        .search input {
+            float:left;
+        }
+
+        .search .search-text {
+            width: 100px;
             height: 40px;
             border: 0;
             background: url(./img/search.png) no-repeat center left;
             outline: 1px solid #ccc;
+            padding-left: 40px;
+            font-size: 16px;
         }
 
-        .m-search .search-text:focus , .m-input .search-btn:focus{
+        .search .search-text:focus , .search .search-btn:focus{
             outline: 1px solid black;
 
         }
 
-        .m-search .search-btn {
-            width: 23%;
+        .search .search-btn {
+            width: 50px;
             height: 40px;
             border: 0;
+            outline: 1px solid #ccc;
         }
 
-        .m-right .m-list ul li {
+        .hot-container {
+            margin-top: 10px;
+            padding: 20px 15px;
+            background-color: white;
+        }
+
+        .hot-container .title {
+            margin-bottom: 25px;
+            color: #666;
+        }
+
+        .hot-list li {
+            display: block;
             list-style: none;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+           
         }
 
-        .m-list li span {
+        .hot-list li div {
+            float: left;
+        }
+
+        .hot-list li .number {
             display: inline-block;
             width: 16px;
-            height:16px;
+            height: 16px;
+            margin-right: 10px;
             line-height: 16px;
-            text-align: center;
-            background: #3F1D4A;
-            color: white;
             border-radius: 8px;
+            text-align: center;
+            background: #522A5C;
+            color: white;
         }
 
-        .m-list li div {
-            display: inline-block;
+        .hot-list li .progress {
+            width: 100px;
+            height: 16px;
+            margin-right: 10px;
+            border: 1px solid #522A5C;
+            background: #522A5C;
         }
+
+        .hot-list li .text {
+            height: 16px; 
+            line-height: 16px;
+            color: #522A5C;
+        }
+
+       
+       /*图片区*/
+       /**图片**/
+       .m-list {
+           /*position: relative;*/
+           background: white;
+       }
+
+       .m-list .item {
+           position: absolute;
+           left: 0;
+           top: 0;
+        }
+    
+        .m-list .item2 {
+            left: 170px;
+            top: 0;
+        } 
+
+        .m-list .item3 {
+            left: 340px;
+            top: 0;
+        }
+
+        .m-list .item4 {
+            left: 510px;
+            top: 0;
+        }
+
+        /*单个图片*/
+       .m-list .item .introduce {
+           box-sizing: border-box;
+           position: relative;
+           width: 160px;
+           line-height: 20px;
+           padding: 12px 12px 12px 50px;
+           margin-top: -4px;
+           background: #522A5C;
+           color: white;
+       }
+
+       .introduce .icon {
+           position: absolute;
+           top: 12px;
+           left: 12px;
+           width: 28px;
+           height: 28px;
+           line-height: 28px;
+           text-align: center;
+           border-radius: 15px;
+           border: 1px solid white;
+       }
+
+       .introduce p {
+           font-size: 12px;
+           word-break: break-all;
+           word-wrap: keep-all;
+           
+       }
+
     </style>
     
 </head>
@@ -206,19 +305,89 @@
     </nav>
 
     <div class="gl-container clearfix">
-        <div class="m-left">
-            <div class="item"></div>
-            
+        <div class="m-left ">
+            <div class="m-list ">
+                <div class="item">
+                    <img src="./img/1.jpg" alt="">
+                    <div class="introduce clearfix">
+                        <span class="icon">A</span>
+                        <div class="content">
+                            <div class="title">标题</div>
+                            <p>文字文字文字文字文字文字文字文文字文字文字文文字文字文字文文字文字文字文</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item2">
+                    <img src="./img/1.jpg" alt="">
+                    <div class="introduce clearfix">
+                        <span class="icon">A</span>
+                        <div class="content">
+                            <div class="title">标题</div>
+                            <p>文字文字文字文</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item item3">
+                    <img src="./img/1.jpg" alt="">
+                    <div class="introduce clearfix">
+                        <span class="icon">A</span>
+                        <div class="content">
+                            <div class="title">标题</div>
+                            <p>文字文字文字文字文字文字文字文字文字文字</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item item4">
+                    <img src="./img/1.jpg" alt="">
+                    <div class="introduce clearfix">
+                        <span class="icon">A</span>
+                        <div class="content">
+                            <div class="title">标题</div>
+                            <p>文字文字文字文字文字文字文字文</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div class="m-right">
-            <div class="m-search">
-                <div class="m-input">
+            <div class="search-container">
+                <div class="search clearfix">
                     <input type="text" class="search-text">
                     <input type="button" class="search-btn" value="GO">
                 </div>
             </div>
-            <div class="m-hot-list">
-                
+            <div class="hot-container">
+                <div class="title">人气榜单</div>
+                <ul class="hot-list">
+                    <li class="clearfix">
+                        <div class="number">1</div>
+                        <div class="progress"></div>
+                        <div class="text">ui.tree</div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="number">2</div>
+                        <div class="progress"></div>
+                        <div class="text">ui.tree</div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="number">2</div>
+                        <div class="progress"></div>
+                        <div class="text">ui.tree</div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="number">2</div>
+                        <div class="progress"></div>
+                        <div class="text">ui.tree</div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="number">2</div>
+                        <div class="progress"></div>
+                        <div class="text">ui.tree</div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
